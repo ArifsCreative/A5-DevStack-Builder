@@ -156,10 +156,10 @@ const technologies: Technology[] = [
 
 const Technologies = () => {
   return (
-    <section className="py-28">
+    <section className="py-20 md:py-24">
       <div className="container mx-auto">
         {/* Section Heading */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-800">
             Explore the <span className="text-pink-500">Technologies</span>
           </h2>
@@ -175,7 +175,7 @@ const Technologies = () => {
             return (
               <div
                 key={technology.name}
-                className="border border-gray-200 rounded-xl p-6 bg-white"
+                className="border border-gray-200 rounded-2xl p-6 bg-white shadow-sm hover:shadow-md transition-shadow duration-300"
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
@@ -183,27 +183,27 @@ const Technologies = () => {
                       <img
                         src={technology.icon}
                         alt={technology.name}
-                        className="w-10 h-10"
+                        className="w-12 h-12 object-contain"
                       />
                     )}
 
-                    <h3 className="text-xl font-semibold text-gray-800">
+                    <h3 className="text-lg font-bold text-gray-800">
                       {technology.name}
                     </h3>
                   </div>
 
                   {technology.badge && (
-                    <span className="badge badge-secondary">
+                    <span className="badge badge-outline badge-secondary text-xs">
                       {technology.badge}
                     </span>
                   )}
                 </div>
 
-                <p className="text-sm text-gray-500 mt-3">
+                <p className="text-sm leading-6 text-gray-500 mt-4">
                   {technology.description}
                 </p>
 
-                <div className="flex justify-between items-center mt-5">
+                <div className="flex justify-between items-center mt-6 pt-4 border-t border-gray-100">
                   <span className="text-sm text-gray-500">
                     {technology.category}
                   </span>
