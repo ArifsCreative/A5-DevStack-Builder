@@ -185,10 +185,10 @@ const Technologies = () => {
 
   return (
     <section className="py-20 md:py-24">
-      <div className="container mx-auto px-8">
+      <div className="max-w-6xl mx-auto px-6">
         {/* Heading */}
 
-        <div className="mb-8 ml-8">
+        <div className="mb-8 ml-6">
           <h2 className="text-3xl font-bold text-gray-900">
             Explore the <span className="text-pink-500">Technologies</span>
           </h2>
@@ -198,9 +198,7 @@ const Technologies = () => {
           </p>
         </div>
 
-        {/* Main Layout */}
-
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 ml-12">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           {/* Technology Cards */}
 
           <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
@@ -209,8 +207,6 @@ const Technologies = () => {
                 key={technology.name}
                 className="border border-gray-200 rounded-2xl p-6 bg-white shadow-sm hover:shadow-md transition"
               >
-                {/* Top Section */}
-
                 <div className="relative">
                   {technology.badge && (
                     <span className="absolute top-0 right-0 px-2 py-1 text-[10px] rounded-full border border-pink-100 text-sky-500 font-bold">
@@ -234,7 +230,6 @@ const Technologies = () => {
                 <p className="text-sm leading-6 text-gray-500 mt-4">
                   {technology.description}
                 </p>
-
                 <div className="flex justify-between items-center mt-6 pt-4 border-t border-gray-100">
                   <div className="flex items-center gap-3">
                     <span className="px-2 py-1 text-xs rounded-md bg-gray-100 text-gray-600">
@@ -245,20 +240,13 @@ const Technologies = () => {
                       {technology.level}
                     </span>
                   </div>
+                  <div className="flex items-center gap-1">
+                    <img src={StarIcon} alt="rating" className="w-3 h-3" />
 
-<div className="flex items-center gap-1">
-
-  <img
-    src={StarIcon}
-    alt="rating"
-    className="w-4 h-4"
-  />
-
-  <span className="text-sm font-medium text-gray-700">
-    {technology.rating}
-  </span>
-
-</div>
+                    <span className="text-sm font-medium text-gray-700">
+                      {technology.rating}
+                    </span>
+                  </div>
                 </div>
 
                 <button
@@ -277,7 +265,7 @@ const Technologies = () => {
             ))}
           </div>
 
-          {/* Your Stack */}
+          {/* Stack */}
 
           <div className="lg:col-span-1">
             <div className="border border-gray-200 rounded-2xl p-5 bg-white shadow-sm">

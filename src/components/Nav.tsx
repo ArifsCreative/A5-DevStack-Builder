@@ -13,10 +13,10 @@ const Nav = () => {
           <li>Contact</li>
         </ul>
 
-        <div className="flex justify-end gap-4">
+        <div className="flex justify-end gap-4 cursor-pointer">
           <button className="px-4 py-2 ">Sign In</button>
 
-          <button className="px-4 py-2 bg-pink-600 text-white rounded-2xl">Sign Up</button>
+          <button className="px-4 py-2 bg-pink-600 text-white rounded-2xl cursor-pointer">Sign Up</button>
         </div>
       </div>
     </nav>
