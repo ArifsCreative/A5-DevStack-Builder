@@ -1,14 +1,15 @@
-import { FaReact, FaNodeJs, FaJava, FaDocker } from "react-icons/fa";
-import {
-  SiJavascript,
-  SiTypescript,
-  SiTailwindcss,
-  SiVuedotjs,
-  SiSvelte,
-  SiNextdotjs,
-  SiPostgresql,
-  SiRedis,
-} from "react-icons/si";
+import ReactIcon from "../assets/icons/React.svg";
+import VueIcon from "../assets/icons/Vue.js.svg";
+import SvelteIcon from "../assets/icons/Svelte.svg";
+import NextIcon from "../assets/icons/Next.js.svg";
+import NodeIcon from "../assets/icons/Node.js.svg";
+import PostgreSQLIcon from "../assets/icons/PostgreSQL.svg";
+import RedisIcon from "../assets/icons/Redis.svg";
+import JavaScriptIcon from "../assets/icons/JavaScript.svg";
+import TypeScriptIcon from "../assets/icons/TypeScript.svg";
+import JavaIcon from "../assets/icons/Java.svg";
+import TailwindIcon from "../assets/icons/Tailwind CSS.svg";
+import DockerIcon from "../assets/icons/Docker.svg";
 
 type Technology = {
   name: string;
@@ -17,8 +18,7 @@ type Technology = {
   level: string;
   rating: number;
   badge?: string;
-  icon?: React.ElementType;
-  color?: string;
+  icon?: string;
 };
 
 const technologies: Technology[] = [
@@ -30,8 +30,7 @@ const technologies: Technology[] = [
     level: "Beginner-Friendly",
     rating: 4.9,
     badge: "Popular",
-    icon: FaReact,
-    color: "text-blue-500",
+    icon: ReactIcon,
   },
 
   {
@@ -42,8 +41,7 @@ const technologies: Technology[] = [
     level: "Beginner-Friendly",
     rating: 4.8,
     badge: "Versatile",
-    icon: SiVuedotjs,
-    color: "text-green-500",
+    icon: VueIcon,
   },
 
   {
@@ -54,7 +52,7 @@ const technologies: Technology[] = [
     level: "Intermediate",
     rating: 4.8,
     badge: "Fast",
-    icon: SiSvelte,
+    icon: SvelteIcon,
   },
 
   {
@@ -64,7 +62,7 @@ const technologies: Technology[] = [
     category: "Frontend",
     level: "Intermediate",
     rating: 4.9,
-    icon: SiNextdotjs,
+    icon: NextIcon,
   },
 
   {
@@ -75,7 +73,7 @@ const technologies: Technology[] = [
     level: "Intermediate",
     rating: 4.8,
     badge: "Standard",
-    icon: FaNodeJs,
+    icon: NodeIcon,
   },
 
   {
@@ -86,7 +84,7 @@ const technologies: Technology[] = [
     level: "Intermediate",
     rating: 4.9,
     badge: "Top SQL",
-    icon: SiPostgresql,
+    icon: PostgreSQLIcon,
   },
 
   {
@@ -97,7 +95,7 @@ const technologies: Technology[] = [
     level: "Intermediate",
     rating: 4.8,
     badge: "Cache",
-    icon: SiRedis,
+    icon: RedisIcon,
   },
 
   {
@@ -108,7 +106,7 @@ const technologies: Technology[] = [
     level: "Beginner-Friendly",
     rating: 4.9,
     badge: "Ubiquitous",
-    icon: SiJavascript,
+    icon: JavaScriptIcon,
   },
 
   {
@@ -119,7 +117,7 @@ const technologies: Technology[] = [
     level: "Intermediate",
     rating: 4.9,
     badge: "Essential",
-    icon: SiTypescript,
+    icon: TypeScriptIcon,
   },
 
   {
@@ -130,7 +128,7 @@ const technologies: Technology[] = [
     level: "Intermediate",
     rating: 4.6,
     badge: "Robust",
-    icon: FaJava,
+    icon: JavaIcon,
   },
 
   {
@@ -141,7 +139,7 @@ const technologies: Technology[] = [
     level: "Beginner-Friendly",
     rating: 4.9,
     badge: "Modern",
-    icon: SiTailwindcss,
+    icon: TailwindIcon,
   },
 
   {
@@ -152,7 +150,7 @@ const technologies: Technology[] = [
     level: "Intermediate",
     rating: 4.9,
     badge: "Containers",
-    icon: FaDocker,
+    icon: DockerIcon,
   },
 ];
 
@@ -174,8 +172,6 @@ const Technologies = () => {
         {/* Technology Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {technologies.map((technology) => {
-            const Icon = technology.icon;
-
             return (
               <div
                 key={technology.name}
@@ -183,8 +179,12 @@ const Technologies = () => {
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    {Icon && (
-                      <Icon className={`text-4xl ${technology.color}`} />
+                    {technology.icon && (
+                      <img
+                        src={technology.icon}
+                        alt={technology.name}
+                        className="w-10 h-10"
+                      />
                     )}
 
                     <h3 className="text-xl font-semibold text-gray-800">
@@ -212,6 +212,7 @@ const Technologies = () => {
                     ⭐ {technology.rating}
                   </span>
                 </div>
+
                 <button className="btn btn-neutral btn-sm w-full mt-4">
                   Add to Stack
                 </button>
