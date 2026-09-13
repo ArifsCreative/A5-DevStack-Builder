@@ -12,6 +12,7 @@ import TypeScriptIcon from "../assets/icons/TypeScript.svg";
 import JavaIcon from "../assets/icons/Java.svg";
 import TailwindIcon from "../assets/icons/Tailwind CSS.svg";
 import DockerIcon from "../assets/icons/Docker.svg";
+import StarIcon from "../assets/icons/Symbol.svg";
 
 type Technology = {
   name: string;
@@ -212,7 +213,7 @@ const Technologies = () => {
 
                 <div className="relative">
                   {technology.badge && (
-                    <span className="absolute top-0 right-0 px-2 py-1 text-[10px] rounded-full border border-pink-200 text-pink-500">
+                    <span className="absolute top-0 right-0 px-2 py-1 text-[10px] rounded-full border border-pink-100 text-sky-500 font-bold">
                       {technology.badge}
                     </span>
                   )}
@@ -245,9 +246,19 @@ const Technologies = () => {
                     </span>
                   </div>
 
-                  <span className="text-sm font-medium text-gray-700">
-                    ⭐ {technology.rating}
-                  </span>
+<div className="flex items-center gap-1">
+
+  <img
+    src={StarIcon}
+    alt="rating"
+    className="w-4 h-4"
+  />
+
+  <span className="text-sm font-medium text-gray-700">
+    {technology.rating}
+  </span>
+
+</div>
                 </div>
 
                 <button

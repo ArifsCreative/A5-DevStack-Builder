@@ -2,7 +2,7 @@ import banner from "../assets/banner-stack.png";
 
 const Banner = () => {
   return (
-    <section className="bg-green-100">
+    <section className="bg-white">
       <div className="container mx-auto px-12 min-h-[500px] grid grid-cols-2 items-center gap-10">
         <div>
           <h1 className="text-5xl font-bold leading-tight">
