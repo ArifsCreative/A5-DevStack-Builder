@@ -1,0 +1,74 @@
+
+[
+  {
+    "name": "React",
+    "description": "A declarative, component-based JavaScript library for building modern user interfaces.",
+    "category": "Frontend",
+    "level": "Beginner-Friendly",
+    "rating": 4.9,
+    "badge": "Popular",
+    "icon": "React"
+  },
+  {
+    "name": "Vue.js",
+    "description": "An approachable, performant, and versatile framework for building web user interfaces.",
+    "category": "Frontend",
+    "level": "Beginner-Friendly",
+    "rating": 4.8,
+    "badge": "Versatile",
+    "icon": "Vue.js"
+  },
+  {
+    "name": "Svelte",
+    "description": "Cybernetically enhanced web apps with compile-time reactivity and zero virtual DOM overhead.",
+    "category": "Frontend",
+    "level": "Intermediate",
+    "rating": 4.8,
+    "badge": "Fast",
+    "icon": "Svelte"
+  },
+  {
+    "name": "Next.js",
+    "description": "The React framework for full-stack web applications with hybrid static and server rendering.",
+    "category": "Frontend",
+    "level": "Intermediate",
+    "rating": 4.9,
+    "icon": "Next.js"
+  },
+  {
+    "name": "Node.js",
+    "description": "An asynchronous event-driven JavaScript runtime built on Chrome's V8 engine.",
+    "category": "Backend",
+    "level": "Intermediate",
+    "rating": 4.8,
+    "badge": "Standard",
+    "icon": "Node.js"
+  },
+  {
+    "name": "PostgreSQL",
+    "description": "A powerful, open-source object-relational database system with proven reliability.",
+    "category": "Database",
+    "level": "Intermediate",
+    "rating": 4.9,
+    "badge": "Top SQL",
+    "icon": "PostgreSQL"
+  },
+  {
+    "name": "Redis",
+    "description": "In-memory data structure store used as a high-speed database, cache, and message broker.",
+    "category": "Database",
+    "level": "Intermediate",
+    "rating": 4.8,
+    "badge": "Cache",
+    "icon": "Redis"
+  },
+  {
+    "name": "JavaScript",
+    "description": "The versatile, ubiquitous scripting language powering dynamic behavior across the web.",
+    "category": "Language",
+    "level": "Beginner-Friendly",
+    "rating": 4.9,
+    "badge": "Ubiquitous",
+    "icon": "JavaScript"
+  }
+]

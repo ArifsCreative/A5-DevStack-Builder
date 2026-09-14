@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import technologies from "../data/data.json";
 import ReactIcon from "../assets/icons/React.svg";
 import VueIcon from "../assets/icons/Vue.js.svg";
 import SvelteIcon from "../assets/icons/Svelte.svg";
@@ -24,138 +24,20 @@ type Technology = {
   icon?: string;
 };
 
-const technologies: Technology[] = [
-  {
-    name: "React",
-    description:
-      "A declarative, component-based JavaScript library for building modern user interfaces.",
-    category: "Frontend",
-    level: "Beginner-Friendly",
-    rating: 4.9,
-    badge: "Popular",
-    icon: ReactIcon,
-  },
-
-  {
-    name: "Vue.js",
-    description:
-      "An approachable, performant, and versatile framework for building web user interfaces.",
-    category: "Frontend",
-    level: "Beginner-Friendly",
-    rating: 4.8,
-    badge: "Versatile",
-    icon: VueIcon,
-  },
-
-  {
-    name: "Svelte",
-    description:
-      "Cybernetically enhanced web apps with compile-time reactivity and zero virtual DOM overhead.",
-    category: "Frontend",
-    level: "Intermediate",
-    rating: 4.8,
-    badge: "Fast",
-    icon: SvelteIcon,
-  },
-
-  {
-    name: "Next.js",
-    description:
-      "The React framework for full-stack web applications with hybrid static and server rendering.",
-    category: "Frontend",
-    level: "Intermediate",
-    rating: 4.9,
-    icon: NextIcon,
-  },
-
-  {
-    name: "Node.js",
-    description:
-      "An asynchronous event-driven JavaScript runtime built on Chrome's V8 engine.",
-    category: "Backend",
-    level: "Intermediate",
-    rating: 4.8,
-    badge: "Standard",
-    icon: NodeIcon,
-  },
-
-  {
-    name: "PostgreSQL",
-    description:
-      "A powerful, open-source object-relational database system with proven reliability.",
-    category: "Database",
-    level: "Intermediate",
-    rating: 4.9,
-    badge: "Top SQL",
-    icon: PostgreSQLIcon,
-  },
-
-  {
-    name: "Redis",
-    description:
-      "In-memory data structure store used as a high-speed database, cache, and message broker.",
-    category: "Database",
-    level: "Intermediate",
-    rating: 4.8,
-    badge: "Cache",
-    icon: RedisIcon,
-  },
-
-  {
-    name: "JavaScript",
-    description:
-      "The versatile, ubiquitous scripting language powering dynamic behavior across the web.",
-    category: "Language",
-    level: "Beginner-Friendly",
-    rating: 4.9,
-    badge: "Ubiquitous",
-    icon: JavaScriptIcon,
-  },
-
-  {
-    name: "TypeScript",
-    description:
-      "A strongly typed programming language that builds on JavaScript for robust tooling.",
-    category: "Language",
-    level: "Intermediate",
-    rating: 4.9,
-    badge: "Essential",
-    icon: TypeScriptIcon,
-  },
-
-  {
-    name: "Java",
-    description:
-      "A secure, object-oriented programming language designed for portability and scale.",
-    category: "Language",
-    level: "Intermediate",
-    rating: 4.6,
-    badge: "Robust",
-    icon: JavaIcon,
-  },
-
-  {
-    name: "Tailwind CSS",
-    description:
-      "A utility-first CSS framework packed with classes that can be composed to build custom UI.",
-    category: "Styling",
-    level: "Beginner-Friendly",
-    rating: 4.9,
-    badge: "Modern",
-    icon: TailwindIcon,
-  },
-
-  {
-    name: "Docker",
-    description:
-      "A platform designed to build, share, and run containerized applications reliably.",
-    category: "DevOps",
-    level: "Intermediate",
-    rating: 4.9,
-    badge: "Containers",
-    icon: DockerIcon,
-  },
-];
+const icons = {
+  React: ReactIcon,
+  "Vue.js": VueIcon,
+  Svelte: SvelteIcon,
+  "Next.js": NextIcon,
+  "Node.js": NodeIcon,
+  PostgreSQL: PostgreSQLIcon,
+  Redis: RedisIcon,
+  JavaScript: JavaScriptIcon,
+  TypeScript: TypeScriptIcon,
+  Java: JavaIcon,
+  "Tailwind CSS": TailwindIcon,
+  Docker: DockerIcon,
+};
 
 const Technologies = () => {
   const [stack, setStack] = useState<Technology[]>([]);
@@ -215,7 +97,7 @@ const Technologies = () => {
 
                   {technology.icon && (
                     <img
-                      src={technology.icon}
+                      src={icons[technology.icon as keyof typeof icons]}
                       alt={technology.name}
                       className="w-8 h-8 object-contain mb-4"
                     />
@@ -277,7 +159,7 @@ const Technologies = () => {
               </p>
 
               {stack.length === 0 ? (
-                <div className="mt-5 h-24 border border-dashed rounded-xl flex items-center justify-center">
+                <div className="mt-5 h-24 border border-dashed border-gray-300  rounded-xl flex items-center justify-center">
                   <p className="text-sm text-gray-400">Your stack is empty.</p>
                 </div>
               ) : (
@@ -285,13 +167,13 @@ const Technologies = () => {
                   {stack.map((item) => (
                     <div
                       key={item.name}
-                      className="border rounded-lg p-3 flex justify-between items-center"
+                      className="border border-gray-200 rounded-lg p-3 flex justify-between items-center"
                     >
                       <div className="flex items-center gap-3">
                         <img
-                          src={item.icon}
+                          src={icons[item.icon as keyof typeof icons]}
                           alt={item.name}
-                          className="w-8 h-8"
+                          className="w-8 h-8 object-contain"
                         />
 
                         <div>
