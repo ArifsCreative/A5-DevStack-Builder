@@ -34,7 +34,7 @@ const Footer = () => {
 
           <div>
             <h4 className="text-sm font-semibold text-gray-900 mb-4">
-              PRODUCT
+              <a href="">PRODUCT</a>
             </h4>
 
             <ul className="space-y-3 text-sm text-gray-500">
@@ -50,7 +50,7 @@ const Footer = () => {
 
           <div>
             <h4 className="text-sm font-semibold text-gray-900 mb-4">
-              COMPANY
+              <a href="">COMPANY</a>
             </h4>
 
             <ul className="space-y-3 text-sm text-gray-500">
@@ -63,12 +63,12 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold text-gray-900 mb-4">LEGAL</h4>
+            <h4 className="text-sm font-semibold text-gray-900 mb-4"><a href="">LEGAL</a></h4>
 
             <ul className="space-y-3 text-sm text-gray-500">
-              <li>Privacy Policy</li>
+              <li><a href="">Privacy Policy</a></li>
 
-              <li>Terms of Service</li>
+              <li><a href="">Terms of Service</a></li>
             </ul>
           </div>
         </div>

@@ -49,7 +49,7 @@ const Technologies = () => {
     if (!alreadyAdded) {
       setStack([...stack, technology]);
 
-      setToast(`${technology.name} added to stack`);
+      setToast("Added to Stack");
 
       setTimeout(() => {
         setToast(null);
