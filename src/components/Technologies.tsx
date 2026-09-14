@@ -185,10 +185,9 @@ const Technologies = () => {
 
   return (
     <section className="py-20 md:py-24">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="container mx-auto px-12">
         {/* Heading */}
-
-        <div className="mb-8 ml-6">
+        <div className="mb-8">
           <h2 className="text-3xl font-bold text-gray-900">
             Explore the <span className="text-pink-500">Technologies</span>
           </h2>
@@ -201,7 +200,7 @@ const Technologies = () => {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           {/* Technology Cards */}
 
-          <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+          <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 ml-2 xl:grid-cols-3 gap-6">
             {technologies.map((technology) => (
               <div
                 key={technology.name}
@@ -222,7 +221,7 @@ const Technologies = () => {
                     />
                   )}
 
-                  <h3 className="text-base font-semibold text-gray-900">
+                  <h3 className="text-base font-bold text-gray-900">
                     {technology.name}
                   </h3>
                 </div>

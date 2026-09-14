@@ -1,10 +1,8 @@
 const Footer = () => {
   return (
     <footer className="mt-24 border-t border-gray-100">
-      <div className="max-w-6xl mx-auto px-8 py-14">
-        {/* Top Footer */}
-
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div className="container mx-auto px-12 py-14">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-15">
           {/* Brand */}
 
           <div>
@@ -63,8 +61,6 @@ const Footer = () => {
               <li>Careers</li>
             </ul>
           </div>
-
-          {/* Legal */}
 
           <div>
             <h4 className="text-sm font-semibold text-gray-900 mb-4">LEGAL</h4>

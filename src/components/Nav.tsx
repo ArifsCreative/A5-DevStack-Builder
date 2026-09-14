@@ -1,7 +1,7 @@
 import Logo from "../assets/logo-text.png";
 const Nav = () => {
   return (
-    <nav className=" bg-white">
+    <nav className=" sticky top-0 z-50 bg-white">
       <div className="container mx-auto px-12 h-20 grid grid-cols-3 items-center">
         <img src={Logo} alt="" />
 
